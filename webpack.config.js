@@ -89,11 +89,15 @@ const config = {
             }),
         new FaviconsWebpackPlugin({
             logo: './src/images/icon.png',
+            prefix: 'assets/favicons/',
             favicons: {
                 icons: {
                     coast: false,
                     yandex: false,
-                    apple: false
+                    android: false,
+                    appleIcon: false,
+                    appleStartup: false,
+                    windows: false
                 }
             }
         })
