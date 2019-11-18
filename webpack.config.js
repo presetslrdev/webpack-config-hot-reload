@@ -89,6 +89,13 @@ const config = {
             }),
         new FaviconsWebpackPlugin({
             logo: './src/images/icon.png',
+			favicons: {
+                icons: {
+                    coast: false,
+                    yandex: false,
+                    apple: false
+                }
+            }
         })
     ],
     optimization: isProduction ? {
