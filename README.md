@@ -1,1 +1,1 @@
-# webpack-config-hot-reload
+# codejam-palette
