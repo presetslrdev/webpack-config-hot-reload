@@ -53,7 +53,7 @@ const config = {
             use: [{
                 loader: 'file-loader',
                 options: {
-                    name: 'images/[name][hash].[ext]'
+                    name: 'assets/images/[name].[ext]'
                 }
             }, {
                 loader: 'image-webpack-loader',
@@ -77,7 +77,7 @@ const config = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: '[name].css',
+            filename: '[name].css?[hash]',
             chunkFilename: '[id].css'
         }),
         ...glob.sync('./src/*.html')
@@ -89,7 +89,7 @@ const config = {
             }),
         new FaviconsWebpackPlugin({
             logo: './src/images/icon.png',
-			favicons: {
+            favicons: {
                 icons: {
                     coast: false,
                     yandex: false,
